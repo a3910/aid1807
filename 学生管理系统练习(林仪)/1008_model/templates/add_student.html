@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>add student</title>
+</head>
+<body>
+    <form action="/add_student" method="post">
+        <p>
+            学生姓名：<input type="text" name="s_name">
+        </p>
+        <p>
+            学生年龄：<input type="number" name="s_age">
+        <div>课程选择：
+            {% for c in params.course %}
+                <p>
+                    <input type="checkbox" name="course" value="{{c.c_id}}">{{c.c_name}}
+                </p>
+            {% endfor %}
+            <input type="submit" value="提交">           
+        </div>
+
+        </p>
+    </form>
+</body>
+</html>

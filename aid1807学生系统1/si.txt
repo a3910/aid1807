@@ -1,0 +1,4 @@
+xiaoming ,10,100
+xiaoli,12,98
+xiaodong,13,96
+lin,12,100

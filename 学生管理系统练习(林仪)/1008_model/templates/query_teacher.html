@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>query teacher</title>
+    <script type="text/javascript">
+        function add_teacher(){
+            location.href="/add_teacher"
+        }
+        function turn_school(){
+            location.href="/school"
+        }       
+    </script>
+</head>
+<body>
+     <p>
+        <input type="button" onclick="add_teacher()" value="添加老师信息">
+        <input type="button" onclick="turn_school()" value="返回首页面">    
+    </p>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>教学课程</th>
+                <th>配偶</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in params.teacher %}
+            <tr>
+                <td>{{t.t_name}}</td>
+                <td>{{t.t_age}}</td>
+                <td>{{t.course.c_name}}</td>
+                <td>{{t.wife.w_name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body,h2,p{
+			margin: 0;
+			
+		}
+		#head{
+			width: 990px;
+			margin:0 auto;
+			
+		}
+		#head h2{
+			font-weight: normal;
+			border-bottom: 1px solid #ccc;
+			color: #999;
+			opacity: 0.5;
+			padding: 20px 0;
+			margin-bottom: 20px;
+			
+
+
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+			margin-top : 70px;
+			margin-right: 40px;
+
+		}
+/*		.right{
+			position: relative;
+		}*/
+		.form-line>p{
+			float: left;
+			width: 50px;
+			color: #999;
+			/*跟输入框高度保持一致*/
+			text-align: right;
+			height: 40px;
+			margin-right: 40px;
+			line-height: 40px;
+		}
+		.form-line>input,.form-line>div{
+			float: right;
+			width: 300px;
+		}
+		.form-input{
+			/*宽高 边框 边距*/
+			box-sizing: border-box;
+			width: 300px;
+			height: 40px;
+			border: 1px solid #999;
+			/*默认输入框的字体为13.33px*/
+			font-size: 16px;
+			
+			/*轮过线*/
+			outline: none;
+			padding: 0 12px;
+			/*文本颜色*/
+			color: #555;
+		}
+		.form-line{
+			margin-top: 20px;
+			/*由于子元素都浮动了，每行的div需要单独指定*/
+			height: 40px;
+			color: #999;
+		}
+		.a1{clear:both;}
+		.choice{
+			float: right;
+		}
+		.remember{
+			width: 18px;
+			height: 18px;
+			vertical-align: middle;
+			list-style-type: square;
+		}
+		.choice a{
+			color: #999;
+		}
+/*		.judge{
+			float: right;
+			color: #000;
+		}*/
+		.denglu,.zhuce{
+			box-sizing: border-box;
+			width: 145px;
+			height: 38px;
+			border: 1px solid #64a131;
+			text-align: center;
+			line-height: 38px;
+			border-radius: 5px;
+			/*字体大小*/
+			font-size: 18px;
+		}
+		.zhuce{
+			float: right;
+			text-decoration: none;
+			color: #64a133;
+		}
+		.denglu{
+			background-color: #64a131;
+			color: #fff;
+		}
+		.left{
+			position: relative;
+ 
+		}
+		.left>a{
+			box-sizing: border-box;
+			width: 154px;
+			height: 47px;
+			text-align: center;
+			line-height: 48px;
+			border: 1px solid #64a131;
+			text-decoration: none;
+			color: #54a131;
+			/*定位布局*/
+			position: absolute;
+			left: 174px;
+			bottom: 20px;
+ 
+ 
+				}
+
+
+
+
+
+
+
+
+	</style>
+<!-- 	<link rel="stylesheet" type="text/css" href="00-regist.css"> -->
+</head>
+<body>		
+	<div id="head">
+		<!-- 1. 标题 -->
+		<h2>会员登录</h2>
+		<!-- 2. 主体分两部分 -->
+		<div class="left">
+			<img src="/home/tarena/abc/huiyuan.jpg">
+			<a href="#">会员注册></a>
+		</div>
+		<div class="right">
+			<form action="" method="get">
+			<!-- 第一行 -->
+			<div class="form-line">
+				<p>手机号</p> 
+				<input type="text" name="zhanghao" maxlength="30" class="form-input">
+			</div>
+			<!-- 第二行 -->
+			<div class="form-line">
+				<p>密码</p>
+				<input type="password" name="mima" maxlength="26"  placeholder="请输入6-20位的号码字符" class="form-input">
+			</div>
+			<!-- 第三行 -->
+			<div class="form-line">
+				<p></p>
+				<div class="choice">
+					<input type="checkbox" name="xuanze" class="remember" checked>记住密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">忘记密码?</a>
+					<a href="#">快捷登录</a>
+				</div>
+	
+			</div>
+			<!-- 第四行 -->
+			<div class="form-line">
+				<p></p>
+				<div class="judge">
+					<input type="submit" value="登录" class="denglu">
+					<!-- <input type="button" value="注册会员" class="zhuce"> -->
+					<a href="#" class="zhuce">注册会员</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

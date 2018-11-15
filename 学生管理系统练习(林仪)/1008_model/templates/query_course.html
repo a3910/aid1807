@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>query course</title>
+    <script type="text/javascript">
+        function add_course(){
+            location.href="/add_course"
+        }
+        function turn_school(){
+            location.href="/school"
+        }
+    </script>
+</head>
+<body>
+<table border=1px>
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>课程</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in params.cour %}
+            <tr>
+                <td>{{c.c_id}}</td>
+                <td>{{c.c_name}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    <p>
+        <input type="button" onclick="add_course()" value="添加课程信息">
+        &nbsp; &nbsp;
+        <input type="button" onclick="turn_school()" value="返回首页面">
+    </p>
+
+</table>
+</body>
+</html>

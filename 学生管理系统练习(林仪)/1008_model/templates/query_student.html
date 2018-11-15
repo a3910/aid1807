@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>query student</title>
+    <script type="text/javascript">
+        function DeleteUser(id){
+            if (confirm("确定删除？")){
+                location.href = '/delete_student?id='+id
+            }
+        }
+        function add_student(){
+            location.href="/add_student"
+        }
+        function turn_school(){
+            location.href="/school"
+        }
+    </script>
+</head>
+<body>
+<table border=1px>
+    <thead>
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for s in params.std %}
+            <tr>
+                <td>{{s.s_id}}</td>
+                <td>
+                    <!--第一种方式可能只在flask起作用 -->
+                    <!-- <a href="/query_one/{{s.s_id}}"> -->
+                    <a href="/query_one_student?id={{s.s_id}}">{{s.s_name}}</a>
+                </td>
+                <td>{{s.s_age}}</td>
+                <td>
+                    <a href="javascript:DeleteUser({{s.s_id}});">
+                    删除</a>
+                    <a href="/update_student?id={{s.s_id}}">
+                    修改</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    <p>
+        <input type="button" onclick="add_student()" value="添加学生信息">
+        &nbsp; &nbsp;
+        <input type="button" onclick="turn_school()" value="返回首页面">
+    </p>
+
+</table>
+</body>
+</html>

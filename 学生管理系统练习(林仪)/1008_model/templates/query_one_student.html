@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <p>学号：{{params.std.s_id}}</p>
+    <p>姓名：{{params.std.s_name}}</p>
+    <p>年龄：{{params.std.s_age}}</p>   
+    <p>课程：
+        {% for c in params.courses %}
+            {{c.c_name}}&nbsp;
+        {% endfor %}
+    </p>
+</body>
+</html>

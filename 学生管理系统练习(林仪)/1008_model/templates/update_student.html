@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>update record</title>
+</head>
+<body>
+<form action="/update_student" method="POST">
+    <p>修改信息：</p>
+    <p>
+        <input type="hidden" name="uid" value="{{params.std.s_id}}">
+    </p>
+    <p>
+        姓名：<input type="text" name="uname" 
+        value="{{params.std.s_name}}"
+        placeholder="{{params.std.s_name}}">
+     <p>
+    <p>
+        年龄：<input type="number" name="uage" 
+        value="{{params.std.s_age}}" 
+        placeholder="{{params.std.s_age}}">
+    <p>   
+    <p>
+        <input type="submit" value="提交">
+    </p>
+</form>
+</body>
+</html>

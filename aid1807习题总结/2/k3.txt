@@ -1,0 +1,85 @@
+安妮
+女
+18
+1000
+亚索
+男
+20
+1800
+赵信
+男
+19
+2500
+
+
+
+
+def Xinxi(l):
+    while True:
+        n = input('输入姓名')
+        if not n:
+            break
+        try:
+            s = input('输入性别')
+            a = int(input('输入年龄'))
+            f = int(input('输入初始战斗力'))
+        except:
+            print('输入有误')
+            continue
+        l.append(dict(name=n,sex=s,age=a,fight=f))
+    return l
+l = []
+L = Xinxi(l)
+
+for d in L:
+    if d['name']=='赵信':
+        print('赵信草丛战斗')
+        d['fight'] -=200
+    if d['name']=='安妮':
+        print('安妮草丛战斗')
+        d['fight'] +=200
+    if d['name']=='亚索':
+        print('安妮草丛战斗')
+        d['fight'] -=200
+
+for d in L:
+    print(d)
+
+
+
+
+def Xinxi(l):
+    while True:
+        n = input('输入姓名')
+        if not n:
+            break
+        try:
+            s = input('输入性别')
+            a = int(input('输入年龄'))
+            f = int(input('输入初始战斗力'))
+        except:
+            print('输入有误')
+            continue
+        l.append(dict(name=n,sex=s,age=a,fight=f))
+    return l
+
+def show(d):
+    print(d['name']....)
+
+
+l = []
+L = Xinxi(l)
+
+for d in L:
+    if d['name']=='赵信':
+        print('赵信草丛战斗')
+        d['fight'] -=200
+    if d['name']=='安妮':
+        print('安妮草丛战斗')
+        d['fight'] +=200
+    if d['name']=='亚索':
+        print('安妮草丛战斗')
+        d['fight'] -=200
+
+for d in L:
+    show(d)

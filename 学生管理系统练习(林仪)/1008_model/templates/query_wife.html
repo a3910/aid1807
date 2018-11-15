@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>query wife</title>
+    <script type="text/javascript">
+        function add_wife(){
+            location.href="/add_wife"
+        }
+        function turn_school(){
+            location.href="/school"
+        }       
+    </script>
+</head>
+<body>
+     <p>
+        <input type="button" onclick="add_wife()" value="添加配偶信息">
+        <input type="button" onclick="turn_school()" value="返回首页面">    
+    </p>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for w in params.wife %}
+            <tr>
+                <td>{{w.w_name}}</td>
+                <td>{{w.w_age}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
